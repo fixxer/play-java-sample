@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Books
+POST /v1/books                       controllers.BookController.add()
+
+# Authors
+PUT /v1/authors/:id                  controllers.AuthorController.update(id: java.util.UUID)
+
+# Genres
+GET /v1/genres/:id/books             controllers.GenreController.loadAssociatedBookCollection(id: java.util.UUID, offset: Int ?= 0, max: Int ?= 50)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
