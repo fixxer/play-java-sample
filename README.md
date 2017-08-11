@@ -1,6 +1,6 @@
 [<img src="https://img.shields.io/travis/fixxer/play-java-sample.svg"/>](https://travis-ci.org/fixxer/play-java-sample)
 
-# play-java-example
+# play-java-sample
 
 This is an example Play application that uses Java, and communicates with an in memory database using EBean.
 
