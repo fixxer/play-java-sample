@@ -31,11 +31,12 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: gradle dependencies
+      - run: sbt update
 
       - save_cache:
           paths:
-            - ~/.gradle
+            - ~/.ivy/cache
+            - ~/.sbt/launchers
           key: v1-dependencies-{{ checksum "build.sbt" }}
 
       # run tests!
